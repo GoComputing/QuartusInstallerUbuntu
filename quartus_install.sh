@@ -5,9 +5,6 @@ QUARTUS_BUILD_VER=.0.670
 INSTALL_DIR=/opt/altera/$QUARTUS_VER
 QUARTUS_COMPLETE_VER=${QUARTUS_VER}${QUARTUS_BUILD_VER}
 
-
-
-
 # Assert folder doesn't exists
 if [ -e "$INSTALL_DIR" ]; then
 	echo "$INSTALL_DIR already exists. Aborting"
@@ -29,7 +26,7 @@ fi
 # Install Quartus II and ModelSim
 echo "Decompressing Quartus II and Modelsim-Altera"
 mkdir -p build/quartus
-tar -xvf Quartus-lite-$QUARTUS_VER-linux.tar -C build/quartus
+tar -xvf Quartus-lite-$QUARTUS_COMPLETE_VER-linux.tar -C build/quartus
 pushd build/quartus/components
 
 echo "Installing Quartus II"
